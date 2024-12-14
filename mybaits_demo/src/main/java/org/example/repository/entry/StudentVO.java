@@ -20,11 +20,15 @@ public class StudentVO {
         return name;
     }
 
+    public void setName(String name){
+    	this.name = name;
+    }
+
     public String toString() {
-        return "StudentVO{" +
+        return "this_is_StudentVO{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
+                ", the_name='" + name + '\'' +
+                ", sex='" + gender + '\'' +
                 ", grade=" + grade +
                 ", dept='" + dept + '\'' +
                 '}';
