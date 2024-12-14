@@ -20,6 +20,10 @@ public class StudentVO {
         return name;
     }
 
+    public void setName(String name){
+    	this.name = name;
+    }
+
     public String getGender() {
         return gender;
     }
@@ -27,7 +31,7 @@ public class StudentVO {
     public String toString() {
         return "StudentVO{" +
                 "id=" + id +
-                ", ttttname='" + name + '\'' +
+                ", the_name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", grade=" + grade +
                 ", dept='" + dept + '\'' +
