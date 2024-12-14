@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.repository.mapper.StudentMapper">
+
+    <!-- 查询所有学生 -->
+    <select id="getAllStudents" resultType="org.example.repository.entry.StudentDO">
+        SELECT id, name, gender, grade, dept
+        FROM student
+    </select>
+
+    <!-- 根据 ID 查询学生 -->
+    <select id="getStudentById" resultType="org.example.repository.entry.StudentDO">
+        SELECT id, name, gender, grade, dept
+        FROM student
+        WHERE id = #{id}
+    </select>
+
+    <!-- 插入一个新学生 -->
+    <insert id="insertStudent" parameterType="org.example.repository.entry.StudentDO">
+        INSERT INTO student (id, name, gender, grade, dept)
+        VALUES (#{id}, #{name}, #{gender}, #{grade}, #{dept})
+    </insert>
+
+    <!-- 更新学生信息 -->
+    <update id="updateStudent" parameterType="org.example.repository.entry.StudentDO">
+        UPDATE student
+        SET name = #{name}, gender = #{gender}, grade = #{grade}, dept = #{dept}
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除学生 -->
+    <delete id="deleteStudent" parameterType="int">
+        DELETE FROM student WHERE id = #{id}
+    </delete>
+
+</mapper>
