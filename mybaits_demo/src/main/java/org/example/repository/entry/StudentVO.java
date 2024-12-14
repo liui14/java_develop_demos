@@ -20,10 +20,14 @@ public class StudentVO {
         return name;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
     public String toString() {
         return "StudentVO{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", ttttname='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", grade=" + grade +
                 ", dept='" + dept + '\'' +
